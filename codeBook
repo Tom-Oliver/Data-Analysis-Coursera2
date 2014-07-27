@@ -59,3 +59,48 @@ The Data:
 their repetitions of the experiment.
 There are 30 subjects, 6 stances. Therefore 180 entries.
 
+Process:
+
+1)Gather names as IDed by Features.txt: features.txt is a list of names for the observations recorded in x_train
+and x_test.
+
+2)Import first data set and name headings: Therefore, I have used the previous names as the headings on 
+importing the data into the project space.
+
+
+3)Tag on the stances, in the raw format: y_train and y_test are the record of the stances used by the individual on 
+performing the experiment, however they are just recorded as numbers. Therefore, I first added these numbers on to a new 
+column for each observation.
+
+4) set up a vector for naming the stance per observation: the numbers recorded map to readable names, as given by
+activity_labels so I set these up as a vector for use in the next stage.
+
+5)Convert number to name: for each entry I added the name for the stance used from the numerical record
+as mapped by the previous vector.
+
+6)Fix up table heading: give the newly created column a sensible name.
+
+7) tag on subjects per observation, named in the same row: the list of subjects per observation is taken from subject_test
+and subject_train, added to the main dataset as a new column.
+
+
+8) This stuff is the same as with the previous set but for the second one: There are two data sets to carry out the same
+processes on, the steps 2:7 are now repeated for the second set.
+
+
+9) Combining the two data sets: the two data sets are combined by simple expedient of the entries of the second being added
+to the entries from the first.
+
+10) Cut down the data set to what is required:  spec requires: 
+"only the measurements on the mean and standard deviation for each measurement."
+So I cut out all columns but the ones given int he "Variables" list above, and I also cut out the now superfluous column
+for "Stances as numbers."
+
+11)Using some specific commands to get the kind of figures required by the spec: Spec Requires:
+"data set with the average of each variable for each activity and each subject"
+So I used the melt() and dcast() commands to create a new table with the requires 180 entries (30 subjects x 6 stances) and
+the averages for each of the remaining variable observations.
+
+12) Creating the output table: output table is in "TidyTable.txt", it reads straight into R.
+
+
