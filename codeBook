@@ -1,3 +1,15 @@
+Design Spec:
+
+ You should create one R script called run_analysis.R that does the following. 
+
+    Merges the training and the test sets to create one data set.
+    Extracts only the measurements on the mean and standard deviation for each measurement. 
+    Uses descriptive activity names to name the activities in the data set
+    Appropriately labels the data set with descriptive variable names. 
+    Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+
+
+Description of the "second, independent tidy data set":
 Variables:
 
 [1] "Stance"                               "subject"                             
@@ -40,3 +52,10 @@ Variables:
 
 Stance and subject are mine, taken from the parts of data provided originially. All other variables
 are the average result of the variables under the Stance in column 1 and for the subject designated in column 2.
+Exact process given by "run_analysis.R".
+
+The Data:
+180 Entries, each entry is a combination of a subject and stance and the average value of the measurements taken over
+their repetitions of the experiment.
+There are 30 subjects, 6 stances. Therefore 180 entries.
+
