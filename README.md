@@ -3,7 +3,7 @@ Data-Analysis-Coursera2
 
 
  run_analysis.R - Executes various commands to create the tidy data set uploaded previously.
+ Run it with the "UCI HAR Dataset" in the folder (side-by-side) it will generate the "TidyTable.txt". 
  
- Each column is named as the column from the oringinal data sets, save only the first two which are the "stance" i.e. the mode of movement used b y the subject and the "subject" which the designation number of the subject. Under each variable is the average result of that individual in that stance under the variable.
- 
+ The codebook describes how to interpret this table and the comments in the run_analysis.R describe the process used to create it.
  
