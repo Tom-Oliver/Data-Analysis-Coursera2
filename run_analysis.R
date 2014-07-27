@@ -22,7 +22,7 @@ dfTest$subject <- read.table("UCI HAR Dataset/test/subject_test.txt",col.names =
 
 
 
-#This stuff is the ssame as with the previus set but for the second one.
+#This stuff is the same as with the previous set but for the second one.
 dfTrain <- read.table("UCI HAR Dataset/train/X_train.txt",col.names=mfNames[,1])
 
 dfTrain$stanceNumber <- read.table("UCI HAR Dataset/train/y_train.txt",col.names = c('Stance.Number'))[,1]
